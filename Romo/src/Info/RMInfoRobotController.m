@@ -20,14 +20,13 @@
 #import "Reachability.h"
 #import "RMNetworkUtilities.h"
 #import "RMSoundEffect.h"
-#import "RMTelepresencePresence.h"
 
 static NSString *telepresenceNumberKey = @"telepresenceNumberKey";
 static NSString *softwareLicenseURL = @"http://romotive.com/software/legal";
 
+//TODO repair > hitaragx
 typedef enum RMInfoRobotControllerRow {
     RMInfoRobotControllerRowName = 0,
-    RMInfoRobotControllerRowRomoNumber,
     RMInfoRobotControllerRowSoundEffects,
     RMInfoRobotControllerRowIdleMovement,
     RMInfoRobotControllerRowAppVersion,
@@ -111,6 +110,7 @@ typedef enum RMInfoRobotControllerRow {
 - (void)controllerDidBecomeActive
 {
     [super controllerDidBecomeActive];
+
     // Fetch network name
     self.wifiName = ([[Reachability reachabilityForLocalWiFi] currentReachabilityStatus] != NotReachable) ? [RMNetworkUtilities WiFiName] : NSLocalizedString(@"No Wi-Fi", @"Generic No Wi-Fi Title");
     
@@ -219,19 +219,20 @@ typedef enum RMInfoRobotControllerRow {
 
 - (void)fetchTelepresenceNumber
 {
-    if ([[UIDevice currentDevice] isDockableTelepresenceDevice]) {
-        [[RMTelepresencePresence sharedInstance] fetchNumber:^(NSError *error) {
-            if (error) {
-                
-            } else {
-                self.telepresenceNumber = [RMTelepresencePresence sharedInstance].number;
-                
-                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:RMInfoRobotControllerRowRomoNumber inSection:0];
-                [self.view.tableView reloadRowsAtIndexPaths:@[indexPath]
-                                           withRowAnimation:UITableViewRowAnimationNone];
-            }
-        }];
-    }
+    //TODO repair > hitaragx
+//    if ([[UIDevice currentDevice] isDockableTelepresenceDevice]) {
+//        [[RMTelepresencePresence sharedInstance] fetchNumber:^(NSError *error) {
+//            if (error) {
+//                
+//            } else {
+//                self.telepresenceNumber = [RMTelepresencePresence sharedInstance].number;
+//                
+//                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:RMInfoRobotControllerRowRomoNumber inSection:0];
+//                [self.view.tableView reloadRowsAtIndexPaths:@[indexPath]
+//                                           withRowAnimation:UITableViewRowAnimationNone];
+//            }
+//        }];
+//    }
 }
 
 
@@ -300,9 +301,11 @@ typedef enum RMInfoRobotControllerRow {
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     int row = indexPath.row;
-    if (row >= RMInfoRobotControllerRowRomoNumber && ![[UIDevice currentDevice] isDockableTelepresenceDevice]) {
-        row++;
-    }
+
+    //TODO repair > hitaragx
+//    if (row >= RMInfoRobotControllerRowRomoNumber && ![[UIDevice currentDevice] isDockableTelepresenceDevice]) {
+//        row++;
+//    }
     
     if (row == RMInfoRobotControllerRowName) {
         RMTextInputCell *cell = [RMTextInputCell dequeueOrCreateCellForTableView:tableView];
@@ -322,13 +325,15 @@ typedef enum RMInfoRobotControllerRow {
         cell.secondaryLabel.text = [NSString stringWithFormat:@"%@",[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
         
         return cell;
-    } else if (row == RMInfoRobotControllerRowRomoNumber) {
-        RMTextLabelCell *cell = [RMTextLabelCell dequeueOrCreateCellForTableView:tableView];
         
-        cell.mainLabel.text = NSLocalizedString(@"Info-Label-RomoNumber", @"Romo Number");
-        cell.secondaryLabel.text = self.telepresenceNumber;
-        
-        return cell;
+        //TODO repair > hitaragx
+//    } else if (row == RMInfoRobotControllerRowRomoNumber) {
+//        RMTextLabelCell *cell = [RMTextLabelCell dequeueOrCreateCellForTableView:tableView];
+//        
+//        cell.mainLabel.text = NSLocalizedString(@"Info-Label-RomoNumber", @"Romo Number");
+//        cell.secondaryLabel.text = self.telepresenceNumber;
+//        
+//        return cell;
     } else if (row == RMInfoRobotControllerRowFirmware) {
         RMTextLabelCell *cell = [RMTextLabelCell dequeueOrCreateCellForTableView:tableView];
         
@@ -413,5 +418,12 @@ typedef enum RMInfoRobotControllerRow {
         
     }
 }
+
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSLog(@"RMInfoRobotController:touchBegan");
+}
+
+
 
 @end

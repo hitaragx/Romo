@@ -6,7 +6,22 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		621CE7C31C104DEA001F115B /* RMCharacter-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 621CE7C41C104DEB001F115B /* Build configuration list for PBXAggregateTarget "RMCharacter-Universal" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = "RMCharacter-Universal";
+			productName = "RMCharacter-Universal";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		62BCD9781C105CF100446CDF /* RMCharacterColorFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 94057772182C20130009762B /* RMCharacterColorFill.m */; };
+		62BCD9791C105CF500446CDF /* RMCharacterColorFill.h in Headers */ = {isa = PBXBuildFile; fileRef = 94057771182C20130009762B /* RMCharacterColorFill.h */; };
 		9401254317FF690C00F9A7B0 /* Romo_Expression_24_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 9401253F17FF690C00F9A7B0 /* Romo_Expression_24_1.json */; };
 		9401254417FF690C00F9A7B0 /* Romo_Expression_24_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9401254017FF690C00F9A7B0 /* Romo_Expression_24_1@2x.png */; };
 		9401254517FF690C00F9A7B0 /* Romo_Expression_24_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 9401254117FF690C00F9A7B0 /* Romo_Expression_24_2.json */; };
@@ -1682,6 +1697,7 @@
 				9448A9A51741659000A82032 /* RMCharacterImage.h in Headers */,
 				9448A9A61741659000A82032 /* RMCharacterProtectedView.h in Headers */,
 				9448A9A71741659000A82032 /* RMCharacterVoice.h in Headers */,
+				62BCD9791C105CF500446CDF /* RMCharacterColorFill.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1752,8 +1768,13 @@
 		9448A73517415AAB00A82032 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Romotive, Inc";
+				TargetAttributes = {
+					621CE7C31C104DEA001F115B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
 			};
 			buildConfigurationList = 9448A73817415AAB00A82032 /* Build configuration list for PBXProject "RMCharacter" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1776,6 +1797,7 @@
 				9448A73C17415AAB00A82032 /* RMCharacter */,
 				9448A75117415B2000A82032 /* RMCharacter Resources */,
 				9448A9891741656D00A82032 /* RMCharacter Framework */,
+				621CE7C31C104DEA001F115B /* RMCharacter-Universal */,
 			);
 		};
 /* End PBXProject section */
@@ -2166,6 +2188,7 @@
 			files = (
 				9448A99D1741658900A82032 /* RMCharacterVoice.m in Sources */,
 				9448A9961741658500A82032 /* RMCharacterAnimation.m in Sources */,
+				62BCD9781C105CF100446CDF /* RMCharacterColorFill.m in Sources */,
 				9448A9971741658500A82032 /* RMCharacterEye.m in Sources */,
 				9448A9981741658500A82032 /* RMCharacterFace.m in Sources */,
 				9448A9991741658500A82032 /* RMCharacterFaceEmotion.m in Sources */,
@@ -2222,6 +2245,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		621CE7C51C104DEB001F115B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		621CE7C61C104DEB001F115B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		9448A74917415AAB00A82032 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2236,6 +2273,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -2253,7 +2291,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s x86_64 i386 arm64";
 			};
 			name = Debug;
 		};
@@ -2282,7 +2320,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s x86_64 i386 arm64";
 			};
 			name = Release;
 		};
@@ -2337,6 +2375,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Romotive.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = RMCharacter;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -2358,6 +2397,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Romotive.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = RMCharacter;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -2368,7 +2408,6 @@
 		9448A9921741656D00A82032 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = NO;
 				COMPRESS_PNG_FILES = NO;
 				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
@@ -2377,7 +2416,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PREFIX_HEADER = "RMCharacter Framework/RMCharacter Framework-Prefix.pch";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../RMShared/**";
 				INFOPLIST_FILE = "RMCharacter Framework/RMCharacter Framework-Info.plist";
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
@@ -2387,6 +2426,7 @@
 				MACH_O_TYPE = mh_object;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Romotive.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = RMCharacter;
 				SKIP_INSTALL = YES;
 				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
@@ -2397,7 +2437,6 @@
 		9448A9931741656D00A82032 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = NO;
 				COMPRESS_PNG_FILES = NO;
 				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
@@ -2407,7 +2446,7 @@
 				FRAMEWORK_VERSION = A;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PREFIX_HEADER = "RMCharacter Framework/RMCharacter Framework-Prefix.pch";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../RMShared/**";
 				INFOPLIST_FILE = "RMCharacter Framework/RMCharacter Framework-Info.plist";
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
@@ -2417,6 +2456,7 @@
 				MACH_O_TYPE = mh_object;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Romotive.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = RMCharacter;
 				SKIP_INSTALL = YES;
 				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
@@ -2427,6 +2467,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		621CE7C41C104DEB001F115B /* Build configuration list for PBXAggregateTarget "RMCharacter-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				621CE7C51C104DEB001F115B /* Debug */,
+				621CE7C61C104DEB001F115B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9448A73817415AAB00A82032 /* Build configuration list for PBXProject "RMCharacter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -26,7 +26,6 @@
 #import "RMSoundEffect.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "RMRealtimeAudio.h"
-#import "RMTelepresencePresence.h"
 
 #ifdef UNLOCK_EVERYTHING
 #import "RMProgressManager.h"
@@ -240,7 +239,7 @@ DDLOG_ENABLE_DYNAMIC_LEVELS
         } else if (completion) {
             completion(YES);
         }
-        
+
     } else if (self.isTransitioningRobotControllers) {
         self.queuedRobotController = robotController;
     }

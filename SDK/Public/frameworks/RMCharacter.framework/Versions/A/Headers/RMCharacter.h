@@ -11,15 +11,12 @@
 //  RMCharacter.h
 //  RMCharacter
 //
-//  Created by Romotive on 1/15/13.
-//  Copyright (c) 2013 Romotive. All rights reserved.
-//
 //==============================================================================
 /** @file RMCharacter.h
  @brief Public header for creating and interfacing with an RMCharacter.
  
- Contains the RMCharacter interface, a few helpful types for interfacing with 
- RMCharacter, and RMCharacterDelegate for receiving events from an instantiated 
+ Contains the RMCharacter interface, a few helpful types for interfacing with
+ RMCharacter, and RMCharacterDelegate for receiving events from an instantiated
  character.
  */
 #import <Foundation/Foundation.h>
@@ -43,16 +40,22 @@ typedef enum {
  Emotions are persistent emotional states
  
  When you set the RMCharacterEmotion of an RMCharacter, it will
- stay in that emotional state until it receives another request to change 
+ stay in that emotional state until it receives another request to change
  its RMCharacterEmotion.
  */
 typedef enum {
+    /// The character is in a bewildered state
+    RMCharacterEmotionBewildered         = 9,
     /// The character is in a curious state
     RMCharacterEmotionCurious            = 1,
+    /// The character is in a delighted state
+    RMCharacterEmotionDelighted          = 10,
     /// The character is in an excited state
     RMCharacterEmotionExcited            = 2,
     /// The character is in a happy state
     RMCharacterEmotionHappy              = 3,
+    /// The character is in an indifferent state
+    RMCharacterEmotionIndifferent        = 8,
     /// The character is in a sad state
     RMCharacterEmotionSad                = 4,
     /// The character is in a scared state
@@ -66,7 +69,7 @@ typedef enum {
 /**
  Expressions are briefly animated actions
  
- Each RMCharacterExpression represents a type of animation that the 
+ Each RMCharacterExpression represents a type of animation that the
  robot will briefly express
  */
 typedef enum {
@@ -74,8 +77,12 @@ typedef enum {
     RMCharacterExpressionNone            = 0,
     /// The character becomes angry
     RMCharacterExpressionAngry           = 1,
+    /// The character gets bewildered
+    RMCharacterExpressionBewildered      = 27,
     /// The character gets bored
     RMCharacterExpressionBored           = 2,
+    /// The character lets out a big laugh
+    RMCharacterExpressionChuckle         = 21,
     /// The character expresses curiosity
     RMCharacterExpressionCurious         = 3,
     /// The character gets dizzy
@@ -86,35 +93,57 @@ typedef enum {
     RMCharacterExpressionExcited         = 6,
     /// The character becomes exhausted
     RMCharacterExpressionExhausted       = 7,
+    /// The character becomes exhausted
+    RMCharacterExpressionFart            = 26,
     /// The character gets happy
     RMCharacterExpressionHappy           = 8,
+    /// The character hiccups
+    RMCharacterExpressionHiccup          = 25,
     /// The character holds his breath
     RMCharacterExpressionHoldingBreath   = 9,
     /// The character laughs
     RMCharacterExpressionLaugh           = 10,
+    /// The character gets disappointed & sad
+    RMCharacterExpressionLetDown         = 23,
     /// The character looks around
     RMCharacterExpressionLookingAround   = 11,
     /// The character falls in love
     RMCharacterExpressionLove            = 12,
     /// The character thinks about something
     RMCharacterExpressionPonder          = 13,
+    /// The character lets out a warm smile
+    RMCharacterExpressionProud           = 22,
     /// The character gets sad
     RMCharacterExpressionSad             = 14,
     /// The character gets scared
     RMCharacterExpressionScared          = 15,
     /// The character becomes sleepy
     RMCharacterExpressionSleepy          = 16,
+    /// The character smacks into the screen
+    RMCharacterExpressionSmack           = 30,
     /// The character sneezes
     RMCharacterExpressionSneeze          = 17,
+    /// The character sniffs something
+    RMCharacterExpressionSniff           = 29,
+    /// The character gets scared
+    RMCharacterExpressionStartled        = 20,
+    /// The character struggles to move
+    RMCharacterExpressionStruggling      = 32,
     /// The character starts babbling
     RMCharacterExpressionTalking         = 18,
+    /// The character makes an "oooh" face
+    RMCharacterExpressionWant            = 24,
+    /// The character makes an "Wee" face
+    RMCharacterExpressionWee             = 31,
     /// The character yawns
-    RMCharacterExpressionYawn            = 19
+    RMCharacterExpressionYawn            = 19,
+    /// The character makes a "Yippee!"
+    RMCharacterExpressionYippee          = 28
 } RMCharacterExpression;
 
 /**
  @struct RMPoint3D
- @brief A helper data type for reasoning about 3-Dimensional cartesian space 
+ @brief A helper data type for reasoning about 3-Dimensional cartesian space
  within the RMCharacter framework
  @var RMPoint3D::x
  The X-axis component of the point
@@ -132,16 +161,16 @@ typedef struct {
 @protocol RMCharacterDelegate;
 
 /**
- @brief RMCharacter is the public interface for creating characters and 
+ @brief RMCharacter is the public interface for creating characters and
  interfacing with them.
-
- An RMCharacter object represents a socially-embodied creature that will 
- respond to events from a programmer while still maintaining an "illusion of 
- life". RMCharacter is meant to abstract away many problems that arise when 
- designing software for social robots, such as animation and gaze. After 
+ 
+ An RMCharacter object represents a socially-embodied creature that will
+ respond to events from a programmer while still maintaining an "illusion of
+ life". RMCharacter is meant to abstract away many problems that arise when
+ designing software for social robots, such as animation and gaze. After
  instantiating an RMCharacter object with a specific type (and setting its
- delegate), it can be added to a superview where the character will be 
- displayed. The RMCharacter object is now ready to accept expressions, 
+ delegate), it can be added to a superview where the character will be
+ displayed. The RMCharacter object is now ready to accept expressions,
  animations, and gaze / eye commands.
  */
 @interface RMCharacter : NSObject
@@ -155,6 +184,16 @@ typedef struct {
  The type of character contained within this instance
  */
 @property (nonatomic, readonly) RMCharacterType characterType;
+
+/**
+ The total number of available RMCharacterEmotions
+ */
+@property (nonatomic, readonly) unsigned int numberOfEmotions;
+
+/**
+ The total number of available RMCharacterExpressions
+ */
+@property (nonatomic, readonly) unsigned int numberOfExpressions;
 
 /**
  Creates an RMCharacter object given a specified character type
@@ -172,7 +211,7 @@ typedef struct {
 + (RMCharacter *)Romo;
 
 /**
- Adds a view displaying the character to a given superview. The view containing 
+ Adds a view displaying the character to a given superview. The view containing
  the character will automatically scale to fit the device's screen.
  
  @param superview The parent view in which to contain the character's view.
@@ -189,10 +228,10 @@ typedef struct {
 /**
  The current persistent emotional state of the character
  
- Setting the emotion transitions and remains in the emotion until explicitly 
+ Setting the emotion transitions and remains in the emotion until explicitly
  changed to another emotion.
  
- Getting the emotion indicates which emotional state the character is currently 
+ Getting the emotion indicates which emotional state the character is currently
  in.
  */
 @property (nonatomic) RMCharacterEmotion emotion;
@@ -200,8 +239,8 @@ typedef struct {
 /**
  The current expression (if any) that the character is expressing
  
- Setting the expression commands the robot to briefly express one of the 
- RMCharacterExpression values. After this expression is finished, the character 
+ Setting the expression commands the robot to briefly express one of the
+ RMCharacterExpression values. After this expression is finished, the character
  will transition back to the current emotion.
  
  Getting the expression returns the current
@@ -240,7 +279,7 @@ typedef struct {
 /**
  A boolean value representing the state of the character's left eye.
  
- Read this property to determine whether the character's left eye is open, and 
+ Read this property to determine whether the character's left eye is open, and
  set it to directly change the state of the character's left eye.
  */
 @property (nonatomic) BOOL leftEyeOpen;
@@ -254,31 +293,39 @@ typedef struct {
 @property (nonatomic) BOOL rightEyeOpen;
 
 /**
+ An RMPoint3D of where the character's looking.
+ 
+ Calling lookAtPoint:animated: sets this value, but the character also changes
+ gaze automatically.
+ */
+@property (nonatomic, readonly) RMPoint3D gaze;
+
+/**
  Combined setter for changing the state of both eyes.
  
  Guarantees that the state of both eyes are changed at the same time.
  
- @param leftEyeOpen YES if the character should set its left eye to be open, 
-    NO for closed
- @param rightEyeOpen YES if the character should set its right eye to be open, 
-    NO for closed
+ @param leftEyeOpen YES if the character should set its left eye to be open,
+ NO for closed
+ @param rightEyeOpen YES if the character should set its right eye to be open,
+ NO for closed
  */
 - (void)setLeftEyeOpen:(BOOL)leftEyeOpen
           rightEyeOpen:(BOOL)rightEyeOpen;
 
 /**
  Tells the character to look at a specified point.
-
- @param point An RMPoint3D specifying where the character should look. 
- When setting the gaze location:
-    - x and y values are clamped to the interval [-1, 1]
-    - z values are clamped to the interval [0, 1]
-    - Negative x values look left, positive x values look right
-    - Negative y values look up, positive y values look down
-    - Smaller z values converge the eyes to look closer, while larger z values
-        diverge eyes toward a parallel gaze
  
- @param animated YES if the character should animate the gaze change, NO for an 
+ @param point An RMPoint3D specifying where the character should look.
+ When setting the gaze location:
+ - x and y values are clamped to the interval [-1, 1]
+ - z values are clamped to the interval [0, 1]
+ - Negative x values look left, positive x values look right
+ - Negative y values look up, positive y values look down
+ - Smaller z values converge the eyes to look closer, while larger z values
+ diverge eyes toward a parallel gaze
+ 
+ @param animated YES if the character should animate the gaze change, NO for an
  immediate jump of the pupils.
  */
 - (void)lookAtPoint:(RMPoint3D)point
@@ -289,13 +336,54 @@ typedef struct {
  */
 - (void)lookAtDefault;
 
+/**
+ The character says a particular utterance
+ */
+- (void)say:(NSString *)utterance;
+
+/**
+ The character makes a short mumbling expression
+ */
+- (void)mumble;
+
+/**
+ The number of expressions that the character is capable of
+ */
++ (unsigned int)numberOfExpressions;
+
+/**
+ The number of emotions that the character is capable of
+ */
++ (unsigned int)numberOfEmotions;
+
+/*
+ A helper method to map human-readable strings to RMCharacterExpressions
+
+ This method takes in any string that is appended to an RMCharacterExpression
+ and returns the corresponding enum value. The string can be in any capitalization
+ and can contain "-", "_", or " " as a separator in multi-word expressions
+ (e.g. "looking-around").
+ */
++ (RMCharacterExpression)mapReadableNameToExpression:(NSString *)name;
+
+/*
+ A helper method to map human-readable strings to RMCharacterExpressions
+ 
+ This method takes in any string that is appended to an RMCharacterEmotion
+ and returns the corresponding enum value. The string can be capitalized
+ in any way.
+ */
++ (RMCharacterEmotion)mapReadableNameToEmotion:(NSString *)name;
+
+- (void)setFillColor:(UIColor *)fillColor percentage:(float)percentage;
+
 @end
 
 /**
  @brief A protocol for receiving messages from an RMCharacter object
  
- This protocol handles receiving all messages from an RMCharacter 
- object. Currently indicates when an expression has begun and when it has 
+ This protocol handles receiving all messages from an RMCharacter
+ object. Currently indicates when an expression has begun and when it has
  finished.
  */
 @protocol RMCharacterDelegate <NSObject>
@@ -321,3 +409,13 @@ extern NSString *const RMCharacterDidBeginExpressingNotification;
  NSNotification posted from a character, when an expression or emotion finishes.
  */
 extern NSString *const RMCharacterDidFinishExpressingNotification;
+
+/**
+ NSNotification posted from a character, when audio begins, like expressions or blinks.
+ */
+extern NSString *const RMCharacterDidBeginAudioNotification;
+
+/**
+ NSNotification posted from a character, when audio finishes.
+ */
+extern NSString *const RMCharacterDidFinishAudioNotification;

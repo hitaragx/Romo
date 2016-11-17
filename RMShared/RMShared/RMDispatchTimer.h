@@ -20,7 +20,7 @@
 @property (nonatomic) double frequency;
 
 /** The queue that the event handler is dispatched onto */
-@property (nonatomic, strong, readonly) dispatch_queue_t queue;
+@property (nonatomic, readonly) dispatch_queue_t queue;
 
 /**
  Creates a timer that fires at the provided frequency

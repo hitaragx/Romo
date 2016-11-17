@@ -34,7 +34,6 @@
 #import "RMUnlockable.h"
 #import "RMSpriteView.h"
 #import "RMAlertView.h"
-#import "RMTelepresencePresence.h"
 
 /** Positions */
 static const CGFloat subtitleCenterY = 16.0;

@@ -18,6 +18,7 @@
 @end
 
 @implementation RMWifiPeerRomoCell
+@synthesize data = _data;
 
 - (NSString *)labelText
 {

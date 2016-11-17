@@ -16,6 +16,7 @@
 @end
 
 @implementation RMRomotePhotoVC
+@synthesize view = _view;
 
 - (void)loadView
 {

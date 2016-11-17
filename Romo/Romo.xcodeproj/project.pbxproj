@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075924031C1A688700824C5D /* AVCEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 075924021C1A688700824C5D /* AVCEncoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0759240F1C1A688F00824C5D /* AVCParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759240E1C1A688F00824C5D /* AVCParameters.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		075924141C1A698F00824C5D /* qt_parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 075924111C1A698F00824C5D /* qt_parser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		075924151C1A698F00824C5D /* SMFileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 075924131C1A698F00824C5D /* SMFileUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0759242B1C1A6C3200824C5D /* libH264bitstream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 075924281C1A6C2500824C5D /* libH264bitstream.a */; };
 		17A533C61839B56700FC39E0 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A533C51839B56700FC39E0 /* NMSSH.framework */; };
 		17F7889C1832EBC800E143DE /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F7889B1832EBC700E143DE /* opencv2.framework */; };
 		17F7889E1832EBFA00E143DE /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F7889D1832EBFA00E143DE /* libc++.dylib */; };
@@ -146,17 +151,6 @@
 		71D8A2EC185007690070F928 /* planet202Sprite.json in Resources */ = {isa = PBXBuildFile; fileRef = 71D8A2E0185007670070F928 /* planet202Sprite.json */; };
 		71D8A32318515E6F0070F928 /* Space-Trampoline.caf in Resources */ = {isa = PBXBuildFile; fileRef = 71D8A32218515E6F0070F928 /* Space-Trampoline.caf */; };
 		71E7464118564C6B00E40689 /* RMNoLocalRomosCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E7464018564C6B00E40689 /* RMNoLocalRomosCell.m */; };
-		71EEBF8D184D6FF300108591 /* RMTelepresenceClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EEBF81184D6FEE00108591 /* RMTelepresenceClientViewController.m */; };
-		71EEBF8E184D6FF600108591 /* RMTelepresenceHostRobotController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EEBF83184D6FEE00108591 /* RMTelepresenceHostRobotController.m */; };
-		71EEBF90184D6FFC00108591 /* RMTelepresenceHostRobotController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EEBF83184D6FEE00108591 /* RMTelepresenceHostRobotController.m */; };
-		71EEBF93184D700700108591 /* RMTelepresencePresence.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EEBF84184D6FEE00108591 /* RMTelepresencePresence.m */; };
-		71EEBF94184D700800108591 /* RMTelepresencePresence.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EEBF84184D6FEE00108591 /* RMTelepresencePresence.m */; };
-		71EEBF95184D701B00108591 /* RMOpenTokManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EEBF86184D6FEE00108591 /* RMOpenTokManager.m */; };
-		71EEBF96184D701B00108591 /* RMOpenTokManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EEBF86184D6FEE00108591 /* RMOpenTokManager.m */; };
-		71EEBF97184D702D00108591 /* RMTelepresenceIncomingCallVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EEBF88184D6FEE00108591 /* RMTelepresenceIncomingCallVC.m */; };
-		71EEBF98184D702F00108591 /* RMTelepresenceIncomingCallVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EEBF88184D6FEE00108591 /* RMTelepresenceIncomingCallVC.m */; };
-		71EEBF99184D703600108591 /* RMTelepresenceIncomingCallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EEBF8A184D6FEE00108591 /* RMTelepresenceIncomingCallView.m */; };
-		71EEBF9A184D703600108591 /* RMTelepresenceIncomingCallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EEBF8A184D6FEE00108591 /* RMTelepresenceIncomingCallView.m */; };
 		71EEBFB0184D77CD00108591 /* Romo-Ringtone-Full-Bodied.caf in Resources */ = {isa = PBXBuildFile; fileRef = 71EEBFA6184D777000108591 /* Romo-Ringtone-Full-Bodied.caf */; };
 		71EEBFB1184D77CD00108591 /* Romo-Ringtone-Full-Bodied.caf in Resources */ = {isa = PBXBuildFile; fileRef = 71EEBFA6184D777000108591 /* Romo-Ringtone-Full-Bodied.caf */; };
 		71EEBFB4184E5C9500108591 /* UIAlertView+RMDismissAll.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EEBFB3184E5C9500108591 /* UIAlertView+RMDismissAll.m */; };
@@ -164,7 +158,6 @@
 		71EEBFB6184E5C9500108591 /* UIAlertView+RMDismissAll.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EEBFB3184E5C9500108591 /* UIAlertView+RMDismissAll.m */; };
 		71EEBFB9184EA13300108591 /* opentok.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 71EEBFB7184EA13300108591 /* opentok.bundle */; };
 		71EEBFBA184EA13300108591 /* opentok.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 71EEBFB7184EA13300108591 /* opentok.bundle */; };
-		71EEBFBB184EA13300108591 /* Opentok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EEBFB8184EA13300108591 /* Opentok.framework */; };
 		71EEBFBC184EA13300108591 /* Opentok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EEBFB8184EA13300108591 /* Opentok.framework */; };
 		71F29F7D17DA768B007B76B0 /* ControllerSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94B594F817D2A65700B3F534 /* ControllerSettings.plist */; };
 		71F29F7E17DA768B007B76B0 /* DriveExpressionPopover.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94B594F917D2A65700B3F534 /* DriveExpressionPopover.plist */; };
@@ -563,7 +556,6 @@
 		94B1F247176D6A3400C5BABC /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B1EFCF176D6A3300C5BABC /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		94B1F248176D6A3400C5BABC /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B1EFD1176D6A3300C5BABC /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		94B1F249176D6A3400C5BABC /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B1EFD3176D6A3300C5BABC /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		94B1F258176D6A3400C5BABC /* libAVCEncoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B1EFEB176D6A3300C5BABC /* libAVCEncoder.a */; };
 		94B1F259176D6A3400C5BABC /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B1EFEC176D6A3300C5BABC /* libavcodec.a */; };
 		94B1F25A176D6A3400C5BABC /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B1EFED176D6A3300C5BABC /* libavdevice.a */; };
 		94B1F25B176D6A3400C5BABC /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B1EFEE176D6A3300C5BABC /* libavfilter.a */; };
@@ -859,9 +851,6 @@
 		BF47016E18E1024C00EE805C /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF47016A18E1024C00EE805C /* HockeySDK.framework */; };
 		BF47016F18E1024C00EE805C /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF47016A18E1024C00EE805C /* HockeySDK.framework */; };
 		BF47017018E1024C00EE805C /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF47016A18E1024C00EE805C /* HockeySDK.framework */; };
-		BF47017118E1024C00EE805C /* HockeySDK.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BF47016C18E1024C00EE805C /* HockeySDK.xcconfig */; };
-		BF47017218E1024C00EE805C /* HockeySDK.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BF47016C18E1024C00EE805C /* HockeySDK.xcconfig */; };
-		BF47017318E1024C00EE805C /* HockeySDK.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BF47016C18E1024C00EE805C /* HockeySDK.xcconfig */; };
 		BF47017418E1024C00EE805C /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF47016D18E1024C00EE805C /* HockeySDKResources.bundle */; };
 		BF47017518E1024C00EE805C /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF47016D18E1024C00EE805C /* HockeySDKResources.bundle */; };
 		BF47017618E1024C00EE805C /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF47016D18E1024C00EE805C /* HockeySDKResources.bundle */; };
@@ -1073,6 +1062,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		075924271C1A6C2500824C5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 075924221C1A6C2500824C5D /* h264bitstream.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C0E3FC9E1554476500705975;
+			remoteInfo = H264bitstream;
+		};
+		075924291C1A6C2500824C5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 075924221C1A6C2500824C5D /* h264bitstream.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C0E3FC701554461000705975;
+			remoteInfo = h264bitstream;
+		};
 		17381DFC1810617300382246 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 949077BD17960CBC005C885F /* RMVision.xcodeproj */;
@@ -1279,6 +1282,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		075924021C1A688700824C5D /* AVCEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCEncoder.m; sourceTree = "<group>"; };
+		0759240E1C1A688F00824C5D /* AVCParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCParameters.m; sourceTree = "<group>"; };
+		075924101C1A698F00824C5D /* qt_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qt_parser.h; sourceTree = "<group>"; };
+		075924111C1A698F00824C5D /* qt_parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = qt_parser.m; sourceTree = "<group>"; };
+		075924121C1A698F00824C5D /* SMFileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMFileUtil.h; sourceTree = "<group>"; };
+		075924131C1A698F00824C5D /* SMFileUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMFileUtil.m; sourceTree = "<group>"; };
+		075924221C1A6C2500824C5D /* h264bitstream.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = h264bitstream.xcodeproj; path = lib/Drive/RomoAV/AVCEncoder/h264bitstream/h264bitstream.xcodeproj; sourceTree = "<group>"; };
 		17A533C51839B56700FC39E0 /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMSSH.framework; path = ../RMShared/RMShared/lib/NMSSH.framework; sourceTree = "<group>"; };
 		17F7889B1832EBC700E143DE /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../SDK/RMVision/RMVision/lib/opencv2.framework; sourceTree = "<group>"; };
 		17F7889D1832EBFA00E143DE /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
@@ -1333,19 +1343,6 @@
 		71D8A32218515E6F0070F928 /* Space-Trampoline.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Space-Trampoline.caf"; sourceTree = "<group>"; };
 		71E7463F18564C6B00E40689 /* RMNoLocalRomosCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNoLocalRomosCell.h; sourceTree = "<group>"; };
 		71E7464018564C6B00E40689 /* RMNoLocalRomosCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNoLocalRomosCell.m; sourceTree = "<group>"; };
-		71EEBF80184D6FEE00108591 /* RMTelepresenceClientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RMTelepresenceClientViewController.h; path = Drive/Telepresence/RMTelepresenceClientViewController.h; sourceTree = "<group>"; };
-		71EEBF81184D6FEE00108591 /* RMTelepresenceClientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RMTelepresenceClientViewController.m; path = Drive/Telepresence/RMTelepresenceClientViewController.m; sourceTree = "<group>"; };
-		71EEBF82184D6FEE00108591 /* RMTelepresenceHostRobotController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RMTelepresenceHostRobotController.h; path = Drive/Telepresence/RMTelepresenceHostRobotController.h; sourceTree = "<group>"; };
-		71EEBF83184D6FEE00108591 /* RMTelepresenceHostRobotController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RMTelepresenceHostRobotController.m; path = Drive/Telepresence/RMTelepresenceHostRobotController.m; sourceTree = "<group>"; };
-		71EEBF84184D6FEE00108591 /* RMTelepresencePresence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RMTelepresencePresence.m; path = Drive/Telepresence/RMTelepresencePresence.m; sourceTree = "<group>"; };
-		71EEBF85184D6FEE00108591 /* RMTelepresencePresence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RMTelepresencePresence.h; path = Drive/Telepresence/RMTelepresencePresence.h; sourceTree = "<group>"; };
-		71EEBF86184D6FEE00108591 /* RMOpenTokManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RMOpenTokManager.m; path = Drive/Telepresence/RMOpenTokManager.m; sourceTree = "<group>"; };
-		71EEBF87184D6FEE00108591 /* RMTelepresence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RMTelepresence.h; path = Drive/Telepresence/RMTelepresence.h; sourceTree = "<group>"; };
-		71EEBF88184D6FEE00108591 /* RMTelepresenceIncomingCallVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RMTelepresenceIncomingCallVC.m; path = Drive/Telepresence/RMTelepresenceIncomingCallVC.m; sourceTree = "<group>"; };
-		71EEBF89184D6FEE00108591 /* RMTelepresenceIncomingCallView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RMTelepresenceIncomingCallView.h; path = Drive/Telepresence/RMTelepresenceIncomingCallView.h; sourceTree = "<group>"; };
-		71EEBF8A184D6FEE00108591 /* RMTelepresenceIncomingCallView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RMTelepresenceIncomingCallView.m; path = Drive/Telepresence/RMTelepresenceIncomingCallView.m; sourceTree = "<group>"; };
-		71EEBF8B184D6FEE00108591 /* RMOpenTokManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RMOpenTokManager.h; path = Drive/Telepresence/RMOpenTokManager.h; sourceTree = "<group>"; };
-		71EEBF8C184D6FEE00108591 /* RMTelepresenceIncomingCallVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RMTelepresenceIncomingCallVC.h; path = Drive/Telepresence/RMTelepresenceIncomingCallVC.h; sourceTree = "<group>"; };
 		71EEBFA6184D777000108591 /* Romo-Ringtone-Full-Bodied.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Romo-Ringtone-Full-Bodied.caf"; sourceTree = "<group>"; };
 		71EEBFB2184E5C9500108591 /* UIAlertView+RMDismissAll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+RMDismissAll.h"; sourceTree = "<group>"; };
 		71EEBFB3184E5C9500108591 /* UIAlertView+RMDismissAll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+RMDismissAll.m"; sourceTree = "<group>"; };
@@ -2268,6 +2265,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0759242B1C1A6C3200824C5D /* libH264bitstream.a in Frameworks */,
 				17A533C61839B56700FC39E0 /* NMSSH.framework in Frameworks */,
 				17F7889E1832EBFA00E143DE /* libc++.dylib in Frameworks */,
 				9505021716B88FD10066CEB6 /* libstdc++.dylib in Frameworks */,
@@ -2297,7 +2295,6 @@
 				BF5BB8961654C58800C24F3D /* ImageIO.framework in Frameworks */,
 				E7F919CA16528A640084FC6C /* MediaPlayer.framework in Frameworks */,
 				BF5BB8981654C59200C24F3D /* MessageUI.framework in Frameworks */,
-				71EEBFBB184EA13300108591 /* Opentok.framework in Frameworks */,
 				94894F14176CEF9F000CCDD3 /* MobileCoreServices.framework in Frameworks */,
 				A309E3F21610DB4100E8730A /* OpenAL.framework in Frameworks */,
 				A309E3F01610DB3900E8730A /* OpenGLES.framework in Frameworks */,
@@ -2308,7 +2305,6 @@
 				9456A81F176FDCCA00ECE9B7 /* Twitter.framework in Frameworks */,
 				E7E25AAF160D45E5007171E1 /* UIKit.framework in Frameworks */,
 				17F7889C1832EBC800E143DE /* opencv2.framework in Frameworks */,
-				94B1F258176D6A3400C5BABC /* libAVCEncoder.a in Frameworks */,
 				94B1F259176D6A3400C5BABC /* libavcodec.a in Frameworks */,
 				94B1F25A176D6A3400C5BABC /* libavdevice.a in Frameworks */,
 				94B1F25B176D6A3400C5BABC /* libavfilter.a in Frameworks */,
@@ -2326,6 +2322,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		075924231C1A6C2500824C5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				075924281C1A6C2500824C5D /* libH264bitstream.a */,
+				0759242A1C1A6C2500824C5D /* h264bitstream */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		43AEF17817E4FC38002B9C62 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -2388,26 +2393,6 @@
 			path = Sprites;
 			sourceTree = "<group>";
 		};
-		71CD5C241829A38A00A20C62 /* Telepresence */ = {
-			isa = PBXGroup;
-			children = (
-				71EEBF87184D6FEE00108591 /* RMTelepresence.h */,
-				71EEBF8B184D6FEE00108591 /* RMOpenTokManager.h */,
-				71EEBF86184D6FEE00108591 /* RMOpenTokManager.m */,
-				71EEBF80184D6FEE00108591 /* RMTelepresenceClientViewController.h */,
-				71EEBF81184D6FEE00108591 /* RMTelepresenceClientViewController.m */,
-				71EEBF82184D6FEE00108591 /* RMTelepresenceHostRobotController.h */,
-				71EEBF83184D6FEE00108591 /* RMTelepresenceHostRobotController.m */,
-				71EEBF85184D6FEE00108591 /* RMTelepresencePresence.h */,
-				71EEBF84184D6FEE00108591 /* RMTelepresencePresence.m */,
-				71EEBF8C184D6FEE00108591 /* RMTelepresenceIncomingCallVC.h */,
-				71EEBF88184D6FEE00108591 /* RMTelepresenceIncomingCallVC.m */,
-				71EEBF89184D6FEE00108591 /* RMTelepresenceIncomingCallView.h */,
-				71EEBF8A184D6FEE00108591 /* RMTelepresenceIncomingCallView.m */,
-			);
-			name = Telepresence;
-			sourceTree = "<group>";
-		};
 		71E43A54183C46BC0045BCEE /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -2444,7 +2429,6 @@
 			children = (
 				945C59D517E8C25A001C3CE8 /* RMiPadVC.h */,
 				945C59D617E8C25A001C3CE8 /* RMiPadVC.m */,
-				71CD5C241829A38A00A20C62 /* Telepresence */,
 				94B1F35C176E091B00C5BABC /* Wi-Fi Drive */,
 			);
 			name = Drive;
@@ -2962,7 +2946,13 @@
 			isa = PBXGroup;
 			children = (
 				948F162E1799B1DD002AF657 /* AVCEncoder.h */,
+				075924021C1A688700824C5D /* AVCEncoder.m */,
 				948F162F1799B1DD002AF657 /* AVCParameters.h */,
+				0759240E1C1A688F00824C5D /* AVCParameters.m */,
+				075924101C1A698F00824C5D /* qt_parser.h */,
+				075924111C1A698F00824C5D /* qt_parser.m */,
+				075924121C1A698F00824C5D /* SMFileUtil.h */,
+				075924131C1A698F00824C5D /* SMFileUtil.m */,
 				948F16301799B1DD002AF657 /* libavcodec */,
 				948F16391799B1DD002AF657 /* libavfilter */,
 				948F16411799B1DD002AF657 /* libavformat */,
@@ -4360,6 +4350,7 @@
 		E7E25AAD160D45E5007171E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				075924221C1A6C2500824C5D /* h264bitstream.xcodeproj */,
 				BF47016918E1024C00EE805C /* HockeySDK.embeddedframework */,
 				17A533C51839B56700FC39E0 /* NMSSH.framework */,
 				71EEBFB7184EA13300108591 /* opentok.bundle */,
@@ -4506,7 +4497,8 @@
 		E7E25AA1160D45E5007171E1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastTestingUpgradeCheck = 0730;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Romotive;
 				TargetAttributes = {
 					BF9D32A11784882B00DF25A4 = {
@@ -4541,6 +4533,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 075924231C1A6C2500824C5D /* Products */;
+					ProjectRef = 075924221C1A6C2500824C5D /* h264bitstream.xcodeproj */;
+				},
+				{
 					ProductGroup = 43AEF17817E4FC38002B9C62 /* Products */;
 					ProjectRef = 43AEF17717E4FC38002B9C62 /* KIF.xcodeproj */;
 				},
@@ -4572,6 +4568,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		075924281C1A6C2500824C5D /* libH264bitstream.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libH264bitstream.a;
+			remoteRef = 075924271C1A6C2500824C5D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0759242A1C1A6C2500824C5D /* h264bitstream */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = h264bitstream;
+			remoteRef = 075924291C1A6C2500824C5D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		17A4D7B4181831A00024D3E8 /* RMVisionSample.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
@@ -4705,7 +4715,6 @@
 				BFCDD60318774BBC0051C0CF /* Localizable.strings in Resources */,
 				BFCDD5D918774BBC0051C0CF /* CharacterScripts.strings in Resources */,
 				BFCDD5C718774BBC0051C0CF /* CharacterScripts.strings in Resources */,
-				BF47017318E1024C00EE805C /* HockeySDK.xcconfig in Resources */,
 				71F29F7E17DA768B007B76B0 /* DriveExpressionPopover.plist in Resources */,
 				7130FDFB17C43D790025B605 /* Chewy.ttf in Resources */,
 				BFCDD60018774BBC0051C0CF /* Extras.strings in Resources */,
@@ -4741,7 +4750,6 @@
 				94138822180C55F8008F701D /* RMActions.plist in Resources */,
 				BFDDD79B18518F3200C6C060 /* Chase-Introduction.json in Resources */,
 				BFCDD5C618774BBC0051C0CF /* CharacterScripts.strings in Resources */,
-				BF47017218E1024C00EE805C /* HockeySDK.xcconfig in Resources */,
 				BF4D81A318CA6287005FE745 /* Extras.strings in Resources */,
 				BFBF22FE18BD743100FC692F /* Extras.strings in Resources */,
 				BF1F014B18B8305500B62EC1 /* Extras.strings in Resources */,
@@ -5056,7 +5064,6 @@
 				ACD22EBA180E766E00464A7D /* EyePoke-7.caf in Resources */,
 				BF4D81A618CA6287005FE745 /* MissionActions.strings in Resources */,
 				BFBF230118BD743100FC692F /* MissionActions.strings in Resources */,
-				BF47017118E1024C00EE805C /* HockeySDK.xcconfig in Resources */,
 				BF1F014E18B8305500B62EC1 /* MissionActions.strings in Resources */,
 				BFE2671418A95BAE00148BF4 /* MissionActions.strings in Resources */,
 				ACD22EB0180E766E00464A7D /* EyePoke-2.caf in Resources */,
@@ -5150,7 +5157,6 @@
 				947E66B518320584001992E5 /* RMSoundEffect.m in Sources */,
 				9440FFF418185813007E157F /* RMGradientLabel.m in Sources */,
 				9407C585180DD63200FA2F4C /* RMAnalytics.m in Sources */,
-				71EEBF8D184D6FF300108591 /* RMTelepresenceClientViewController.m in Sources */,
 				7130FD7F17C42D960025B605 /* RMConnection.m in Sources */,
 				71EEBFB6184E5C9500108591 /* UIAlertView+RMDismissAll.m in Sources */,
 				945C598A17E7E0C0001C3CE8 /* RMRomoteDrivePhotoButton.m in Sources */,
@@ -5221,7 +5227,6 @@
 				ACD421F81832E98400F67230 /* RMContactManager.m in Sources */,
 				711FB1C318442EE800A12550 /* RMPlanetSpaceSceneView.m in Sources */,
 				7130FD8D17C42E140025B605 /* RAVService.m in Sources */,
-				71EEBF96184D701B00108591 /* RMOpenTokManager.m in Sources */,
 				7130FD7E17C42D940025B605 /* RMBroadcaster.m in Sources */,
 				7130FD8117C42D9A0025B605 /* RMPeer.m in Sources */,
 				7130FD7217C42D6F0025B605 /* RMRemoteControlService.m in Sources */,
@@ -5265,7 +5270,6 @@
 				9413883A180C58E4008F701D /* RMActionRunner.m in Sources */,
 				949B593717949EE40042D062 /* RMDriveActionView.m in Sources */,
 				94AEE9471785FA6F0047507C /* RMEquilibrioception.m in Sources */,
-				71EEBF93184D700700108591 /* RMTelepresencePresence.m in Sources */,
 				43A29EF517C80629000CEF38 /* RMSpaceObject.m in Sources */,
 				94AEE9481785FA6F0047507C /* RMTouch.m in Sources */,
 				AC9E11F517FCE1FD00EA5F93 /* RMLineView.m in Sources */,
@@ -5340,7 +5344,6 @@
 				94CE910D181638F10013DCA5 /* RMRomotion.m in Sources */,
 				AC67B36B18177DB3007C8C3F /* RMSynthesizer.m in Sources */,
 				949B593F17949EE40042D062 /* RMLightActionView.m in Sources */,
-				71EEBF98184D702F00108591 /* RMTelepresenceIncomingCallVC.m in Sources */,
 				949B596D17949EE40042D062 /* RMTurnActionIcon.m in Sources */,
 				949B593917949EE40042D062 /* RMFaceActionIcon.m in Sources */,
 				9417842B1794AE4B00AAFF45 /* RMSpaceScene.m in Sources */,
@@ -5349,7 +5352,6 @@
 				949B597717949EE40042D062 /* RMWaitActionView.m in Sources */,
 				948F16CA1799B1DE002AF657 /* RMSession.m in Sources */,
 				71A51B1B184D166400CB7D36 /* UILabel+RomoStyles.m in Sources */,
-				71EEBF90184D6FFC00108591 /* RMTelepresenceHostRobotController.m in Sources */,
 				949B58ED17949EE40042D062 /* RMMissionRuleConstraint.m in Sources */,
 				43A29EF117C805F9000CEF38 /* RMPushNotificationsManager.m in Sources */,
 				949B594F17949EE40042D062 /* RMActionIcon.m in Sources */,
@@ -5390,7 +5392,6 @@
 				BF9D332B1784882B00DF25A4 /* UIImageView+AFNetworking.m in Sources */,
 				948F16E41799B1DE002AF657 /* RMSocketServer.m in Sources */,
 				949B58EB17949EE40042D062 /* RMMissionRule.m in Sources */,
-				71EEBF9A184D703600108591 /* RMTelepresenceIncomingCallView.m in Sources */,
 				ACE18044181DF9CE002260C6 /* RMRealtimeAudio.m in Sources */,
 				AC21B02117EA7ADA00DC991E /* RMMatureCreatureRobotController.m in Sources */,
 				949B592D17949EE40042D062 /* RMListInput.m in Sources */,
@@ -5454,7 +5455,6 @@
 				AC9E11F417FCE1FD00EA5F93 /* RMLineView.m in Sources */,
 				9490002517AAB4A200051B74 /* RMExtendedScrollView.m in Sources */,
 				AC67B36A18177DB3007C8C3F /* RMSynthesizer.m in Sources */,
-				71EEBF94184D700800108591 /* RMTelepresencePresence.m in Sources */,
 				ACF5524018512C6200B3FFDB /* RMFreezeDanceBehavior.m in Sources */,
 				94B1F498176E15ED00C5BABC /* RMWiFiDriveRobotController.m in Sources */,
 				948F16C91799B1DE002AF657 /* RMSession.m in Sources */,
@@ -5505,6 +5505,7 @@
 				AC21B01E17EA7ADA00DC991E /* RMJuvenileCreatureRobotController.m in Sources */,
 				949B595617949EE40042D062 /* RMSayActionView.m in Sources */,
 				949B591C17949EE40042D062 /* RMCompilingVC.m in Sources */,
+				0759240F1C1A688F00824C5D /* AVCParameters.m in Sources */,
 				949B597217949EE40042D062 /* RMVideoActionView.m in Sources */,
 				949B58EC17949EE40042D062 /* RMMissionRuleConstraint.m in Sources */,
 				949B594417949EE40042D062 /* RMLookActionIcon.m in Sources */,
@@ -5526,7 +5527,6 @@
 				94C3985417D4F6240062A40D /* RMNoActionView.m in Sources */,
 				7141D6A917E3ABAF0015EBF3 /* RMSandboxMission.m in Sources */,
 				94A1419A17BF3B1400BDB66A /* RMOrientationConfidenceModel.m in Sources */,
-				71EEBF8E184D6FF600108591 /* RMTelepresenceHostRobotController.m in Sources */,
 				945A52A31807673D0041CA39 /* RMTextSwitchCell.m in Sources */,
 				9425C897180522CF00F95FBF /* RMFartActionView.m in Sources */,
 				94CE910C181638F10013DCA5 /* RMRomotion.m in Sources */,
@@ -5599,8 +5599,6 @@
 				BF4527461890ABF00093C875 /* UIImage+RoundedCorner.m in Sources */,
 				714BDA5F177265F500E710B5 /* RMInfoRobotView.m in Sources */,
 				948F16CD1799B1DE002AF657 /* RMSubscriber.m in Sources */,
-				71EEBF97184D702D00108591 /* RMTelepresenceIncomingCallVC.m in Sources */,
-				71EEBF95184D701B00108591 /* RMOpenTokManager.m in Sources */,
 				948F16D31799B1DE002AF657 /* RMDataPacket.m in Sources */,
 				9425C894180522CF00F95FBF /* RMFartActionIcon.m in Sources */,
 				94ED933F18510BD100AD03A4 /* RMFaceColorActionIcon.m in Sources */,
@@ -5611,12 +5609,15 @@
 				949B596417949EE40042D062 /* RMSquareActionIcon.m in Sources */,
 				948F16B11799B1DE002AF657 /* RAVSubscriber.m in Sources */,
 				BFB24AB317EE3DE4009C7129 /* RMTextButtonCell.m in Sources */,
+				075924141C1A698F00824C5D /* qt_parser.m in Sources */,
 				9490780B179610AE005C885F /* UIFont+RMFont.m in Sources */,
 				ACC61CAE17BC0D2000F853E0 /* RMInteractionScriptRuntime.m in Sources */,
 				94B1F240176D6A3400C5BABC /* AFHTTPClient.m in Sources */,
+				075924151C1A698F00824C5D /* SMFileUtil.m in Sources */,
 				94B4C82A17C3D9F30036E6E8 /* RMSlideToStart.m in Sources */,
 				94C766C3183D46AD00A980CD /* RMDoodleView.m in Sources */,
 				94138833180C58E4008F701D /* RMAction.m in Sources */,
+				075924031C1A688700824C5D /* AVCEncoder.m in Sources */,
 				BF45274B1890AC210093C875 /* UIImage+Alpha.m in Sources */,
 				949077CC17960CF8005C885F /* RMTracker.m in Sources */,
 				94138845180C58E4008F701D /* RMRuntimeRobotController.m in Sources */,
@@ -5645,7 +5646,6 @@
 				948F16DF1799B1DE002AF657 /* RMSerializable.m in Sources */,
 				BF8BF4ED1862ECE000A887D3 /* RMPopupWebview.m in Sources */,
 				BF20381117C2AFFF00552F8D /* RMAnalytics.m in Sources */,
-				71EEBF99184D703600108591 /* RMTelepresenceIncomingCallView.m in Sources */,
 				BF1A785118DA257B00A0D23C /* RMActivityChooserButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -6125,6 +6125,7 @@
 				INFOPLIST_FILE = "UI Tests (sim)/UI Tests (sim)-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romotive.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = octest;
@@ -6150,6 +6151,7 @@
 				INFOPLIST_FILE = "UI Tests (sim)/UI Tests (sim)-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romotive.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = octest;
@@ -6195,6 +6197,7 @@
 					"-w",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.romotive.romo.RomoControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = armv7;
@@ -6237,6 +6240,7 @@
 					"-w",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.romotive.romo.RomoControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = armv7;
@@ -6278,6 +6282,7 @@
 					"-ObjC",
 					"-w",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.romotive.romo;
 				PRODUCT_NAME = Romo;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = armv7;
@@ -6318,6 +6323,7 @@
 					"-ObjC",
 					"-w",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.romotive.romo;
 				PRODUCT_NAME = Romo;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = armv7;
@@ -6337,12 +6343,17 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Taiki Hirai (8Z2EXAFMXN)";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -6360,8 +6371,9 @@
 				INFOPLIST_FILE = "src/Romo3-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "fddf7a3c-efc2-43b8-be6e-d72813bb4893";
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -6378,11 +6390,15 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -6397,6 +6413,7 @@
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
@@ -6437,10 +6454,11 @@
 					"-ObjC",
 					"-w",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.romotive.romo2;
 				PRODUCT_NAME = Romo;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = armv7;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -6451,7 +6469,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Romotive";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6480,10 +6498,11 @@
 					"-ObjC",
 					"-w",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.romotive.romo2;
 				PRODUCT_NAME = Romo;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = armv7;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};

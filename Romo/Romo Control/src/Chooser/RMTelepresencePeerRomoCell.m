@@ -17,6 +17,8 @@
 @end
 
 @implementation RMTelepresencePeerRomoCell
+//TODO repait > hitaragx
+@synthesize data = _data;
 
 - (id)initWithFrame:(CGRect)frame
 {
